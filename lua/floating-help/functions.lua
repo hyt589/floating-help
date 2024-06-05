@@ -28,7 +28,10 @@ M.create_group = function()
 end
 
 M.open_help = function(buf)
-	if buf ~= nil and vim.bo[buf].filetype == "help" then
+	if buf ~= nil and vim.bo[buf].buftype == "help" then
+		if vim.bo[buf].filetype == "" then
+			vim.bo[buf].filetype = "help"
+		end
 		local current_help_win = vim.api.nvim_get_current_win()
 		local help_win = Util.create_help_window(buf, Options)
 
