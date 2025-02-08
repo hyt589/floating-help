@@ -3,7 +3,7 @@ local M = {}
 M.args = {
 	border = "solid", -- none, single, double, rounded, solid, shadow, array
 	ratio = 0.8,
-	width = 78,
+	width = 100,
 }
 
 M.vars = {
@@ -11,7 +11,7 @@ M.vars = {
 }
 
 M.float_opts = {
-	width = 78,
+	width = 100,
 	height = 0,
 	window_opts = {
 		border = M.args.border,
